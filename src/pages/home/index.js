@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
+import dot from "../../assets/images/dot.png";
 
 export const Home = () => {
     return (
@@ -20,7 +21,14 @@ export const Home = () => {
                         style={{
                             backgroundImage: `url(${introdata.your_img_url})`,
                         }}
-                    ></div>
+                    >
+                        <div
+                            className="dot"
+                            style={{
+                                backgroundImage: `url(${dot})`,
+                            }}
+                        ></div>
+                    </div>
                     <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
                         <div className="align-self-center ">
                             <div className="intro mx-auto">

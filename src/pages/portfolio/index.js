@@ -72,11 +72,25 @@ export const Portfolio = () => {
                                 <h3>{project.title}</h3>
 
                                 <div className="d-flex justify-content-center gap-1 align-items-center flex-wrap">
-                                    <a href={project.liveLink}>View Project</a>
-                                    <a href={project.githubLinkFrontend}>
+                                    <a
+                                        href={project.liveLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Project
+                                    </a>
+                                    <a
+                                        href={project.githubLinkFrontend}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         Frontend Code
                                     </a>
-                                    <a href={project.githubLinkBackend}>
+                                    <a
+                                        href={project.githubLinkBackend}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         Backend Code
                                     </a>
                                 </div>

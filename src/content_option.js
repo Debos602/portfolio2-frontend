@@ -25,26 +25,26 @@ const dataabout = {
 };
 const worktimeline = [
     {
-        jobtitle: "MERN Stack Developer",
-        where: "Tech Solutions Inc.",
+        jobtitle: "Car Rental Website",
+        where: "Self-Initiated",
+        date: "2024 - Present",
+    },
+    {
+        jobtitle: "Sporting Goods E-Commerce Website",
+        where: "Self-Initiated",
         date: "2023 - Present",
     },
     {
-        jobtitle: "Frontend Developer",
-        where: "Innovatech Labs",
-        date: "2022 - 2023",
-    },
-    {
-        jobtitle: "Web Development Intern",
-        where: "Webify Co.",
-        date: "2021 - 2022",
+        jobtitle: "Cloude kitchen Website",
+        where: "Independent",
+        date: "2022",
     },
 ];
 
 const frontEnd = [
     { name: "React.js", value: 90 },
-    { name: "Next.js", value: 85 },
-    { name: "Javascript", value: 80 },
+    { name: "Next.js", value: 50 },
+    { name: "Javascript", value: 50 },
     { name: "Typescript", value: 75 },
     { name: "Tailwind CSS", value: 85 },
 ];

@@ -11,7 +11,7 @@ export const Blog = () => {
     const [selectedBlog, setSelectedBlog] = useState(null);
 
     useEffect(() => {
-        // Fetch blogs data
+        // Fetch blogs data https://portfolio-backend-cyan-nine.vercel.app/ http://localhost:5000
         axios
             .get("https://portfolio-backend-cyan-nine.vercel.app/api/blogs")
             .then((response) => {
