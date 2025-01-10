@@ -16,9 +16,23 @@
     background: var(--secondary-color);
     padding: 6px;
     border: 1px solid var(--secondary-color);
-    transition: 0.3s ease;
     font-size: 0;
     min-height: 300px;
+}
+.po_item:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--overlay-color);
+    position: absolute;
+    z-index: 0;
+    transform: scale(1);
+    transition: 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .po_item img {
@@ -27,16 +41,15 @@
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
     transition: 0.3s ease;
+    object-fit: cover;
 }
 
 .po_item .content {
     position: absolute;
     height: 0;
     width: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--overlay-color);
+    top: 0;
+    left: 0;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -59,10 +72,13 @@
 .po_item:hover {
     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25);
 }
+.po_item:hover:after {
+    transform: scale(0.9);
+    opacity: 1;
+    visibility: visible;
+}
 
 .po_item:hover .content {
-    height: calc(100% - 30px);
-    width: calc(100% - 30px);
     opacity: 1;
 }
 
@@ -76,9 +92,27 @@
     border: solid 1px var(--text-color);
     padding: 4px 8px;
     text-align: center;
-    font-size: 1rem;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 14px;
 }
 
 .po_item .content a:hover {
     text-decoration: none;
+}
+.po-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; /* Adjust the gap between grid items */
+    padding: 16px; /* Optional padding for spacing */
+}
+
+/* Optional: Add a media query for fine-tuning */
+@media (max-width: 600px) {
+    .po-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+.About-header.container.page-enter-done {
+    position: relative;
 }

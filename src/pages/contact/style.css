@@ -1,5 +1,5 @@
 .contact__form .form-control {
-    padding: 1.375rem .75rem;
+    padding: 1.375rem 0.75rem;
     line-height: 1.5;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -9,7 +9,7 @@
 
 .contact__form input.form-control {
     margin-bottom: 2em;
-    height: calc(2.5em + .75rem + 2px);
+    height: calc(2.5em + 0.75rem + 2px);
 }
 
 button.btn.ac_btn:hover {
@@ -26,7 +26,7 @@ button.btn.ac_btn:hover {
     background: var(--text-color);
     transform: translateX(100%);
     animation: shift-rightwards 1s ease-in-out infinite;
-    animation-delay: .3s;
+    animation-delay: 0.3s;
 }
 
 @keyframes shift-rightwards {
@@ -42,4 +42,19 @@ button.btn.ac_btn:hover {
     100% {
         transform: translateX(100%);
     }
+}
+.alter-message {
+    background: #07041e;
+    color: #fff;
+}
+.alert-success {
+    --bs-alert-color: #0f5132;
+    --bs-alert-bg: #07041e;
+    --bs-alert-border-color: #badbcc;
+}
+.contact__form {
+    background-color: #07041e;
+}
+.page-enter-done {
+    position: relative;
 }

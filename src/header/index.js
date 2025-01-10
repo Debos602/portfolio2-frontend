@@ -4,15 +4,14 @@ import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext, socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
-import logoLight from "../assets/images/1-removebg-preview.png";
-import logoDark from "../assets/images/2__1_-removebg-preview.png";
+import logo from "../assets/images/1-removebg-preview.png";
+import logo2 from "../assets/images/2__1_-removebg-preview.png";
 
 const Headermain = () => {
-    const [isActive, setActive] = useState("false");
+    const [isActive, setActive] = useState(false);
     const [theme, setTheme] = useState(
         localStorage.getItem("theme") || "light"
     );
-    const [animateLogo, setAnimateLogo] = useState(false);
 
     const handleToggle = () => {
         setActive(!isActive);
@@ -21,74 +20,121 @@ const Headermain = () => {
 
     const handleThemeChange = (newTheme) => {
         setTheme(newTheme);
-        setAnimateLogo(true);
+        localStorage.setItem("theme", newTheme);
     };
 
     useEffect(() => {
-        if (animateLogo) {
-            const timer = setTimeout(() => setAnimateLogo(false), 500);
-            return () => clearTimeout(timer);
+        const storedTheme = localStorage.getItem("theme");
+        if (storedTheme) {
+            setTheme(storedTheme);
         }
-    }, [animateLogo]);
+    }, []);
 
     return (
         <>
-            <header className="fixed-top site__header ">
-                <div className="d-flex justify-content-between align-items-center ">
-                    <img
-                        src={theme === "light" ? logoDark : logoLight}
-                        alt="logo"
-                        className={`logo ${animateLogo ? "animate" : ""}`}
-                    />
-                    <ul className="the_menu d-flex justify-content-between m-0 p-0 gap-4">
-                        <li className="menu_item">
-                            <Link onClick={handleToggle} to="/" className="">
-                                Home
-                            </Link>
-                        </li>
-                        <li className="menu_item">
-                            <Link
-                                onClick={handleToggle}
-                                to="/project"
-                                className=""
-                            >
-                                Project
-                            </Link>
-                        </li>
-                        <li className="menu_item">
-                            <Link
-                                onClick={handleToggle}
-                                to="/skills"
-                                className=""
-                            >
-                                Skills
-                            </Link>
-                        </li>
+            <header className="fixed-top site__header">
+                <div className="d-flex align-items-center justify-content-between">
+                    <Link className="navbar-brand nav_ac" to="/">
+                        <img
+                            src={theme === "light" ? logo2 : logo}
+                            alt="logo"
+                            className="logo"
+                        />
+                    </Link>
+                    <div className="d-flex align-items-center">
+                        <h4 onClick={handleToggle} className="mb-0 pe-2">
+                            Menu
+                        </h4>
+                        <button
+                            className="menu__button nav_ac"
+                            onClick={handleToggle}
+                        >
+                            {isActive ? <VscClose /> : <VscGrabber />}
+                        </button>
+                    </div>
+                </div>
 
-                        <li className="menu_item">
-                            <Link
-                                onClick={handleToggle}
-                                to="/about"
-                                className=""
-                            >
-                                About
-                            </Link>
-                        </li>
-                        <li className="menu_item">
-                            <Link
-                                onClick={handleToggle}
-                                to="/contact"
-                                className=""
-                            >
-                                Contact
-                            </Link>
-                        </li>
-                    </ul>
-                    <div className="d-flex align-items-center bg-white">
-                        <Themetoggle onThemeChange={handleThemeChange} />
+                <div
+                    className={`site__navigation ${
+                        isActive ? "menu__opend" : ""
+                    }`}
+                >
+                    <div className="bg__menu h-100">
+                        <div className="menu__wrapper">
+                            <div className="menu__container p-3">
+                                <ul className="the_menu">
+                                    <li className="menu_item">
+                                        <Link
+                                            onClick={handleToggle}
+                                            to="/"
+                                            className="my-2"
+                                        >
+                                            Home
+                                        </Link>
+                                    </li>
+                                    <li className="menu_item">
+                                        <Link
+                                            onClick={handleToggle}
+                                            to="/project"
+                                            className="my-2"
+                                        >
+                                            Project
+                                        </Link>
+                                    </li>
+                                    <li className="menu_item">
+                                        <Link
+                                            onClick={handleToggle}
+                                            to="/skills"
+                                            className="my-2"
+                                        >
+                                            Skills
+                                        </Link>
+                                    </li>
+                                    <li className="menu_item">
+                                        <Link
+                                            onClick={handleToggle}
+                                            to="/blog"
+                                            className="my-2"
+                                        >
+                                            Blog
+                                        </Link>
+                                    </li>
+                                    <li className="menu_item">
+                                        <Link
+                                            onClick={handleToggle}
+                                            to="/about"
+                                            className="my-2"
+                                        >
+                                            About
+                                        </Link>
+                                    </li>
+                                    <li className="menu_item">
+                                        <Link
+                                            onClick={handleToggle}
+                                            to="/contact"
+                                            className="my-2"
+                                        >
+                                            Contact
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
+                        <div className="d-flex">
+                            <a href={socialprofils.facebook}>Facebook</a>
+                            <a href={socialprofils.github}>Github</a>
+                            <a href={socialprofils.twitter}>Twitter</a>
+                        </div>
+                        <p className="copyright m-0">copyright __ {logotext}</p>
                     </div>
                 </div>
             </header>
+            <div className="br-top"></div>
+            <div className="br-bottom"></div>
+            <div className="br-left"></div>
+            <div className="br-right"></div>
         </>
     );
 };

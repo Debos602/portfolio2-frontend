@@ -1,5 +1,5 @@
 .sec_sp {
-    margin-bottom: calc(3rem + 5.128vw)
+    margin-bottom: calc(3rem + 5.128vw);
 }
 
 .table td,
@@ -15,7 +15,7 @@
     font-size: 16px;
     font-weight: 700;
     margin: 15px 0 20px;
-    font-family: 'Raleway';
+    font-family: "Raleway";
 }
 
 .progress {
@@ -70,7 +70,6 @@
     padding-bottom: 4px;
 }
 
-
 /*! CSS Used keyframes */
 
 @-webkit-keyframes fadeInUp {
@@ -97,4 +96,7 @@
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
     }
+}
+.About-header.container.page-enter-done {
+    position: relative;
 }

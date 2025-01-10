@@ -19,7 +19,7 @@ export const Skill = () => {
                 </Helmet>
                 <Row className="my-3 pt-md-3">
                     <Col lg="8">
-                        <h1 className="display-4">Skills</h1>
+                        <h1 className="display-4 mt-3">Skills</h1>
                         <hr className="t_border my-4 ml-0 text-left" />
                     </Col>
                 </Row>

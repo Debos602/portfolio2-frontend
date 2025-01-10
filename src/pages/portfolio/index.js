@@ -4,13 +4,14 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { meta } from "../../content_option";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 export const Portfolio = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
         axios
-            .get("http://localhost:5000/api/project")
+            .get("https://portfolio-backend-cyan-nine.vercel.app/api/project")
             .then((response) => {
                 if (response.data.success) {
                     setProjects(response.data.data);
@@ -24,23 +25,44 @@ export const Portfolio = () => {
             });
     }, []);
 
+    // Animation variants
+    const itemVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8, // Increased duration for smoother effect
+                delay: i * 0.2, // Slightly larger delay for each item
+                ease: "linear", // Smooth easing
+            },
+        }),
+    };
+
     return (
         <HelmetProvider>
             <Container className="About-header">
                 <Helmet>
                     <meta charSet="utf-8" />
-                    <title> Portfolio | {meta.title} </title>{" "}
+                    <title> Project | {meta.title} </title>{" "}
                     <meta name="description" content={meta.description} />
                 </Helmet>
-                <Row className="mb-5 mt-3 pt-md-3">
+                <Row className="mb-3 mt-3 pt-md-3">
                     <Col lg="8">
-                        <h1 className="display-4 mb-4"> Portfolio </h1>{" "}
+                        <h1 className="display-4 mt-3"> Project </h1>{" "}
                         <hr className="t_border my-4 ml-0 text-left" />
                     </Col>
                 </Row>
-                <div className="d-flex gap-4">
+                <div className="po-grid">
                     {projects.map((project, i) => (
-                        <div key={i} className="po_item">
+                        <motion.div
+                            key={i}
+                            className="po_item"
+                            variants={itemVariants}
+                            initial="hidden"
+                            animate="visible"
+                            custom={i} // Pass the index as a custom prop
+                        >
                             <img
                                 className=""
                                 src={project.image}
@@ -49,8 +71,8 @@ export const Portfolio = () => {
                             <div className="content">
                                 <h3>{project.title}</h3>
 
-                                <a href={project.liveLink}>View Project</a>
-                                <div>
+                                <div className="d-flex justify-content-center gap-1 align-items-center flex-wrap">
+                                    <a href={project.liveLink}>View Project</a>
                                     <a href={project.githubLinkFrontend}>
                                         Frontend Code
                                     </a>
@@ -59,7 +81,7 @@ export const Portfolio = () => {
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </Container>

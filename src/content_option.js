@@ -19,25 +19,25 @@ const introdata = {
 };
 
 const dataabout = {
-    title: "abit about my self",
+    title: "About my self",
     aboutme:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
+        "I am a passionate and detail-oriented MERN-Stack Developer with modern web developmen technologies. My skills include React.js, Next.js, and TypeScript for front-end development,complemented by Node.js, Express.js, and MongoDB for back-end solutions.",
 };
 const worktimeline = [
     {
-        jobtitle: "Designer of week",
-        where: "YAdfi",
-        date: "2020",
+        jobtitle: "MERN Stack Developer",
+        where: "Tech Solutions Inc.",
+        date: "2023 - Present",
     },
     {
-        jobtitle: "Designer of week",
-        where: "Jamalya",
-        date: "2019",
+        jobtitle: "Frontend Developer",
+        where: "Innovatech Labs",
+        date: "2022 - 2023",
     },
     {
-        jobtitle: "Designer of week",
-        where: "ALquds",
-        date: "2019",
+        jobtitle: "Web Development Intern",
+        where: "Webify Co.",
+        date: "2021 - 2022",
     },
 ];
 
@@ -76,19 +76,29 @@ const softSkills = [
 
 const services = [
     {
-        title: "UI & UX Design",
+        title: "Full-Stack Web Development",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+            "Building modern and responsive web applications using the MERN stack (MongoDB, Express, React, and Node.js).",
     },
     {
-        title: "Mobile Apps",
+        title: "Frontend Development",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+            "Creating dynamic, user-friendly interfaces with React.js and ensuring seamless user experiences.",
     },
     {
-        title: "Wordpress Design",
+        title: "Backend Development",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+            "Designing and implementing robust backend systems with Node.js and Express, and integrating them with MongoDB for data management.",
+    },
+    {
+        title: "API Development & Integration",
+        description:
+            "Developing RESTful APIs and integrating third-party APIs to extend application functionality.",
+    },
+    {
+        title: "Deployment & Maintenance",
+        description:
+            "Deploying applications to platforms like AWS, Heroku, or Vercel, and providing ongoing maintenance and optimization.",
     },
 ];
 
@@ -175,9 +185,9 @@ const contactConfig = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
     // creat an emailjs.com account
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_SERVICE_ID: "service_ddmtsu7",
+    YOUR_TEMPLATE_ID: "template_cn6zddd",
+    YOUR_USER_ID: "4Ghr7j9HG-d3COl-q",
 };
 
 const socialprofils = {

@@ -1,0 +1,126 @@
+.blog-section {
+    padding: 50px 0;
+    background-color: #07041e;
+    position: relative;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: start;
+    color: #f0f0f0;
+}
+
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-content {
+    padding: 15px;
+}
+
+.blog-title {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.blog-description {
+    color: #f0f0f0;
+    margin-bottom: 15px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.sidebar-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-list-item.active {
+    background-color: #f0f0f0;
+}
+.blog-list-content h3 {
+    color: #f0f0f0;
+}
+
+.blog-list-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.blog-list-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-list-title {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+.blog-list-description {
+    font-size: 0.875rem;
+    color: #fff;
+    margin: 0;
+}
+.blog-list-item.active .blog-list-content h3,
+.blog-list-item.active .blog-list-content p {
+    color: #07041e;
+}
+[data-theme="light"] h1.display-4 {
+    color: #060c25;
+}
+[data-theme="light"] .blog-content h2,
+[data-theme="light"] .blog-list-content h3,
+[data-theme="light"] .blog-list-content p {
+    color: #060c25;
+}
+[data-theme="light"] .blog-content p {
+    color: #060c25;
+}
