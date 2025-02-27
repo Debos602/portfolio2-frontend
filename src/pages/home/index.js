@@ -50,7 +50,7 @@ export const Home = () => {
                                 <p className="mb-1x">{introdata.description}</p>
                                 <div className="intro_btn-action pb-5">
                                     <a
-                                        href="https://drive.google.com/file/d/1oayeQxWZ57yJe0J3Dj4pbf0UaFdS8ujM/view"
+                                        href="https://drive.google.com/file/d/14pyIqrQq9sPX6GCbm-NUWvogsi32dqid/view"
                                         className="text_2"
                                         target="_blank"
                                         rel="noopener noreferrer"
