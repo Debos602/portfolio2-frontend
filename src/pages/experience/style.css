@@ -839,7 +839,8 @@
 }
 
 .rocket-icon {
-  animation: rocketLaunch 2s infinite;
+    animation: rocketLaunch 2s infinite;
+    margin-right: 15px;
 }
 
 @keyframes rocketLaunch {

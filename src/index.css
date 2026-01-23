@@ -23,6 +23,11 @@ body {
     height: 100%;
 }
 
+/* Enable smooth scrolling site-wide */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     height: 100%;
@@ -36,6 +41,9 @@ body {
     padding-top: 60px;
     border-left: 10px solid var(--primary-color);
     border-right: 10px solid var(--primary-color);
+
+    /* Improve scrolling for overflow containers */
+    -webkit-overflow-scrolling: touch;
 }
 
 ul {

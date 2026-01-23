@@ -381,7 +381,7 @@ export const Experience = () => {
                       {/* Duration & Location */}
                       <div className="card-meta">
                         <div className="meta-item">
-                          <FaCalendarAlt className="meta-icon" />
+                          <FaCalendarAlt className="meta-icon text-white" />
                           <span className="meta-text">
                             {formatDate(exp.startDate)} — {exp.endDate ? formatDate(exp.endDate) : "Present"}
                             <span className="meta-duration">
@@ -390,7 +390,7 @@ export const Experience = () => {
                           </span>
                         </div>
                         <div className="meta-item">
-                          <FaMapMarkerAlt className="meta-icon" />
+                          <FaMapMarkerAlt className="meta-icon text-white" />
                           <span className="meta-text">{exp.location}</span>
                         </div>
                       </div>
@@ -411,7 +411,7 @@ export const Experience = () => {
                       {/* Responsibilities with Stagger Animation */}
                       <div className="card-responsibilities">
                         <h4 className="section-title">
-                          <FaRocket className="section-icon rocket-icon" />
+                          <FaRocket className="section-icon rocket-icon mr-5" />
                           Key Responsibilities
                         </h4>
                         <ul className="responsibilities-list">

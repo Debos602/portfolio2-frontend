@@ -66,20 +66,23 @@ export const Portfolio = () => {
         };
     };
 
-    useEffect(async () => {
-        axios
-            // .get("http://localhost:5000/api/project")
-           await axios.get("https://portfolio-backend-cyan-nine.vercel.app/api/project")
-            .then((response) => {
-                if (response.data.success) {
-                    setProjects(response.data.data);
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                // const res = await axios.get("http://localhost:5000/api/project");
+                const res = await axios.get("https://portfolio-backend-cyan-nine.vercel.app/api/project");
+                if (res.data && res.data.success) {
+                    setProjects(res.data.data);
+                    console.log(res.data.data);
                 }
-                setLoading(false);
-            })
-            .catch((error) => {
+            } catch (error) {
                 console.error("Error fetching project data:", error);
+            } finally {
                 setLoading(false);
-            });
+            }
+        };
+
+        fetchProjects();
     }, []);
 
     const filteredProjects = projects.filter(project => {

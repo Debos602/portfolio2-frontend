@@ -35,6 +35,16 @@
   margin: 0 auto 1.8rem;
 }
 
+/* Ensure header subtitle in portfolio is clearly visible */
+.header-section .lead {
+  color: #ffffff;
+}
+
+/* Override Bootstrap .text-muted (which uses !important) */
+.header-section .lead.text-muted {
+  color: #ffffff !important;
+}
+
 /* Filters: pill buttons with frosted glass + animated underline */
 .filter-buttons{display:flex;gap:0.6rem;justify-content:center;margin-bottom:2rem}
 .filter-btn{
