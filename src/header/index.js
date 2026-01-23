@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { logotext, socialprofils } from "../content_option";
 import logo from "../assets/images/1-removebg-preview.png";
 
@@ -12,9 +13,21 @@ const Headermain = () => {
     );
 
     const handleToggle = () => {
-        setActive(!isActive);
-        document.body.classList.toggle("ovhidden");
+        setActive((prev) => !prev);
     };
+
+    // keep body class in sync with menu state
+    useEffect(() => {
+        if (isActive) document.body.classList.add("ovhidden");
+        else document.body.classList.remove("ovhidden");
+    }, [isActive]);
+
+    // close menu when route changes
+    const location = useLocation();
+    useEffect(() => {
+        setActive(false);
+        document.body.classList.remove("ovhidden");
+    }, [location]);
 
     const handleThemeChange = (newTheme) => {
         setTheme(newTheme);
@@ -26,6 +39,11 @@ const Headermain = () => {
         if (storedTheme) {
             setTheme(storedTheme);
         }
+    }, []);
+
+    // cleanup on unmount
+    useEffect(() => {
+        return () => document.body.classList.remove("ovhidden");
     }, []);
 
     return (
@@ -73,6 +91,15 @@ const Headermain = () => {
                                             className="my-2"
                                         >
                                             Project
+                                        </Link>
+                                    </li>
+                                    <li className="menu_item">
+                                        <Link
+                                            onClick={handleToggle}
+                                            to="/experience"
+                                            className="my-2"
+                                        >
+                                        Experience
                                         </Link>
                                     </li>
                                     <li className="menu_item">
