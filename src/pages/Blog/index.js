@@ -29,7 +29,7 @@ export const Blog = () => {
         setLoading(true);
         axios
             // .get("https://portfolio-backend-cyan-nine.vercel.app /api/blogs")
-            .get("https://portfolio-backend-cyan-nine.vercel.app /api/blogs")
+            .get("https://portfolio-backend-cyan-nine.vercel.app/api/blogs")
             .then((res) => {
                 if (res.data?.success) {
                     setBlogs(res.data.data);

@@ -69,7 +69,7 @@ export const Portfolio = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const res = await axios.get("https://portfolio-backend-cyan-nine.vercel.app /api/project");
+                const res = await axios.get("https://portfolio-backend-cyan-nine.vercel.app/api/project");
                 // const res = await axios.get("https://portfolio-backend-cyan-nine.vercel.app /api/project");
                 if (res.data && res.data.success) {
                     setProjects(res.data.data);
