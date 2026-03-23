@@ -201,7 +201,7 @@ export const Home = () => {
 
                         <motion.div className="hero-cta" variants={fadeIn}>
                             <a
-                                href="https://drive.google.com/file/d/1bFFPCCqDMDH3bvNpgqW-R2cfmWTlrvXo/view"
+                                href="https://drive.google.com/file/d/1U7iKNv02nK845ATKJeGq6IarzxzxLLKg/view?usp=sharing"
                                 className="btn-glow"
                                 target="_blank"
                                 rel="noopener noreferrer"
