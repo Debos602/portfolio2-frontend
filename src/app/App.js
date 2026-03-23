@@ -6,7 +6,7 @@ import AppRoutes from "./routes";
 import Headermain from "../header";
 import AnimatedCursor from "../hooks/AnimatedCursor";
 import "./App.css";
-import ParticlesComponent from "../components/perticles";
+import StarCanvas from "../components/StarCanvas";
 import { Toaster } from "sonner";
 
 function _ScrollToTop(props) {
@@ -21,7 +21,7 @@ const ScrollToTop = withRouter(_ScrollToTop);
 export default function App() {
     return (
         <>
-            <ParticlesComponent id="particles" />
+            <StarCanvas />
             <Toaster />
             <Router basename={process.env.PUBLIC_URL}>
                 <div className="cursor__dot">
