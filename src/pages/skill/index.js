@@ -110,20 +110,7 @@ export const Skill = () => {
                             <p className="skills-subtitle">
                                 A comprehensive showcase of my technical expertise and professional capabilities
                             </p>
-                            <div className="skills-stats">
-                                <div className="stat">
-                                    <div className="stat-number">{frontEnd.length + backEnd.length}</div>
-                                    <div className="stat-label">Technical Skills</div>
-                                </div>
-                                <div className="stat">
-                                    <div className="stat-number">{tools.length}</div>
-                                    <div className="stat-label">Tools & Technologies</div>
-                                </div>
-                                <div className="stat">
-                                    <div className="stat-number">{softSkills.length}</div>
-                                    <div className="stat-label">Soft Skills</div>
-                                </div>
-                            </div>
+                         
                         </div>
                     </Col>
                 </Row>

@@ -28,7 +28,8 @@ export const Blog = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get("https://portfolio-backend-cyan-nine.vercel.app/api/blogs")
+            // .get("https://portfolio-backend-cyan-nine.vercel.app/api/blogs")
+            .get("http://localhost:5000/api/blogs")
             .then((res) => {
                 if (res.data?.success) {
                     setBlogs(res.data.data);
