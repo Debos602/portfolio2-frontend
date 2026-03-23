@@ -38,7 +38,7 @@ export const Experience = () => {
   ];
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/experience")
+    axios.get("https://portfolio-backend-cyan-nine.vercel.app/api/experience")
       .then(res => {
         const data = res.data.data;
         setExperiences(data);
@@ -94,9 +94,7 @@ export const Experience = () => {
               Experience
               
             </h1>
-            <p className="exp-subtitle">
-              A timeline of my professional journey and technical growth
-            </p>
+           
           </div>
         </Reveal>
 
